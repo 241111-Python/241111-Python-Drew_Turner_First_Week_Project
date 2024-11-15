@@ -12,7 +12,7 @@
 # Creating the Letters array to define the 26 letters of the alphabet
 
 Letters=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
-User_Signed_In
+User_Signed_In=""
 
 # If Game_Files is not in "echo ls" (looking in current directory) touch Game_Files. 
 # (Or just append GameFiles)
