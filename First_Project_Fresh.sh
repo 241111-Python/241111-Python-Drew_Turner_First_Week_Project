@@ -30,12 +30,29 @@ if [ $Account_Answer == "n" ]; then
         fi
 fi
 
-read -p "Press "s" to start the game, or "x" to exit." Playing
+Session_Number=$(grep -c "$Username" Game_Files.txt)
 
-while [ $Playing="s" ]
+read -p "Would you like to play? Press "y" for yes and "n" for no. " Playing
+
+while [ $Playing="y" ]
 do
+    Random_Number=$(( (Random % 26) ))
+    RandomLetter="${Letters[Random_Number -1]}"
 
+     # Ask the user for a word as input and store that word as a variable.
+
+    read -p "Type your word, any word! " User_Word
+
+    if [[ $User_Word =~ "$RandomLetter" ]]; then
+            echo "You won! The letter was $RandomLetter".""
+            echo "$Username"_"$Password"_""$date "+%m-%d-%Y"""_""$date "+%H:%M:%S"""_"$Session_Number"_""Win_"$RandomLetter"_"$User_Word" >> Game_Files.txt
+            read -p "Would you like to play again? Press "y" if yes, "n for no."" Playing
+        else
+            echo "You lost :( The letter was $RandomLetter".""
+            read -p "Would you like to play again? Press "y" for yes and "n" for no. " Playing
+    fi
 done
 
-
-exit
+echo "Thanks for playing!"
+        sleep 2
+        exit
