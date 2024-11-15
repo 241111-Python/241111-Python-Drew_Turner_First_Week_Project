@@ -34,11 +34,6 @@ Session_Number=$(grep -c "$Username" Game_Files.txt)
 
 read -p "Would you like to play? Press "y" for yes and "n" for no. " Playing
 
-#if [ $Playing="n" ]; then
-#        echo "Thanks for playing!"
-#        sleep 2
-#        exit
-#fi
 
 while [ $Playing == "y" ]
 do
@@ -51,7 +46,7 @@ do
 
     if [[ $User_Word =~ "$RandomLetter" ]]; then
             echo "You won! The letter was $RandomLetter".""
-            echo "$Username"_"$Password"_""$date "+%m-%d-%Y"""_""$date "+%H:%M:%S"""_"$Session_Number"_""Win_"$RandomLetter"_"$User_Word" >> Game_Files.txt
+            echo "$Username"_"$Password"_""$date"+%m-%d-%Y"""_""$date"+%H:%M:%S"""_"$Session_Number"_""Win_"$RandomLetter"_"$User_Word" >> Game_Files.txt
             echo ""
             read -p "Would you like to play again? Press "y" if yes, "n" for no. " Playing
             echo ""
@@ -63,9 +58,7 @@ do
             echo ""
             
     fi
-#    if [ $Playing="n" ]; then
-#            break
-#    fi
+
 done
 
 echo "Thanks for playing!"
