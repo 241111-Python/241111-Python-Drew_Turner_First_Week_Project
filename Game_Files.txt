@@ -18,3 +18,22 @@ Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
 Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
 Drew_Turner_ +%m-%d-%Y_ +%H:%M:%S_3_Win_z_zag
 Drew_Turner_ +%m-%d-%Y_ +%H:%M:%S_3_Win_z_zap
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Drew_Turner_ +%m-%d-%Y_ +%H:%M:%S_5_Win_z_zap
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+admin_admin_
+admin_admin_ +%m-%d-%Y_ +%H:%M:%S_1_Win_z_zap
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+admin_admin_ +%m-%d-%Y_ +%H:%M:%S_2_Win_z_zap
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+a_a_
+a_a_ +%m-%d-%Y_ +%H:%M:%S_25_Win_z_z
+a_a_ +%m-%d-%Y_ +%H:%M:%S_25_Win_z_z
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
