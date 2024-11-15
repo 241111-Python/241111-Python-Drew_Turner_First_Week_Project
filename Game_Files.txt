@@ -15,3 +15,6 @@ Drew_Turner_
 Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
 Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
 Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
+Drew_Turner_ +%m-%d-%Y_ +%H:%M:%S_3_Win_z_zag
+Drew_Turner_ +%m-%d-%Y_ +%H:%M:%S_3_Win_z_zap
