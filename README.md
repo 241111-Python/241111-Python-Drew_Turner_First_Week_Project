@@ -17,4 +17,4 @@ In both of the above cases, it
 It then continues to prompt if you would like to play again until you say no. in which case, it thanks the player for playing, waits a courtesy two seconds for the message to sink in, and then closes.
 
 ## The data file
-The data file 
+The data file logs 

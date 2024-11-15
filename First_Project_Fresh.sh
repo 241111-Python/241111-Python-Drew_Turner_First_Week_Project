@@ -12,14 +12,6 @@ if ! [ -e "Game_Files.txt" ]; then
     echo "Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord" >> Game_Files.txt
 fi
 
-
-
-# if [ "$?"!=0 ]; then
-# echo "$?"
-#     echo "Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord" >> Game_Files.txt
-# 
-# fi
-# 
 while [ "$Account" == "" ]
 do
     read -p "Welcome to my game! do you have an account or not? enter "y" for yes or "n" for no." Account_Answer
@@ -27,7 +19,6 @@ do
 if [ $Account_Answer == "n" ]; then
         read -p "please input your username. " Username
         read -p "please input your password. " Password
-        # echo $Username"_"$Password"_" >> Game_Files.txt
         echo "Welcome $Username".""
         Account="something"
 
@@ -54,8 +45,6 @@ while [ "$Playing" == "y" ]
 do
     Random_Number=$(( (RANDOM % 26) ))
     RandomLetter="${Letters[Random_Number -1]}"
-
-     # Ask the user for a word as input and store that word as a variable.
 
     read -p "Type your word, any word! " User_Word
 
