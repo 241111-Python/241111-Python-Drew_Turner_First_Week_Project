@@ -65,7 +65,8 @@ Session_Number=$(grep -c "$Username" Game_Files.txt)
 
  # Now. after the "s" key is pressed, generate the random letter and store it as a variable.
 
-    if [ $Playing == "y" ]; then
+while [ $Playing == "y" || $Play_Again == "y" ]
+do
         Random_Number=$(( (Random % 26) ))
         RandomLetter="${Letters[Random_Number -1]}"
 
@@ -77,46 +78,46 @@ Session_Number=$(grep -c "$Username" Game_Files.txt)
      # If the word does contain the letter, display "You won! the letter was (letter) and your word was (word)."
      # If the word does NOT contain the letter, display "You lost :( the letter was (letter) and your word was (word)."
 
-        if [[ $User_Word =~ "$RandomLetter" ]]; then
+    if [[ $User_Word =~ "$RandomLetter" ]]; then
             echo "You won! The letter was $RandomLetter".""
             echo "$Username"_"$Password"_""$date "+%m-%d-%Y"""_""$date "+%H:%M:%S"""_"$Session_Number"_""Win_"$RandomLetter"_"$User_Word" >> Game_Files.txt
             read -p "Would you like to play again? Press "y" if yes, "n for no."" Play_Again
-            if [ $Play_Again == "y" ]; then
+        if [ $Play_Again == "y" ]; then
                 continue
 
-            else if [ $Play_Again == "n" ]; then
+        else if [ $Play_Again == "n" ]; then
                 echo "Thanks for playing!"
                 sleep 5
                 exit
 
-            else
+        else
                 read -p "Would you like to play again? Press "y" if yes, "n for no."" Play_Again
-            fi
-
-        #else
-            echo "You lost :( The letter was $RandomLetter".""
-            read -p "Would you like to play again?" Play_Again
-            if [ $Play_Again == "y" ]; then
-                continue
-
-            else if [ $Play_Again == "n" ]; then
-                echo "Thanks for playing!"
-                sleep 5
-                exit
-
-            else
-                read -p "Would you like to play again? Press "y" if yes, "n for no."" Play_Again
-            fi
         fi
 
-   # else if [ $Playing == "x" ]; then
+        else
+            echo "You lost :( The letter was $RandomLetter".""
+            read -p "Would you like to play again?" Play_Again
+        if [ $Play_Again == "y" ]; then
+                continue
+
+        else if [ $Play_Again == "n" ]; then
+                echo "Thanks for playing!"
+                sleep 5
+                exit
+
+        else
+                read -p "Would you like to play again? Press "y" if yes, "n for no."" Play_Again
+        fi
+    fi
+
+else if [ $Playing=="x" ]; then
         echo "Thanks for playing!"
         sleep 5
         exit
 
-    #else
+else
         read -p "Press "s" to start the game, or "x" to exit." Playing
-fi
+done
 # Now record the attempt with account, date and time, win or loss, generated letter, and guessed word into Game_Files.
 # Display "Would you like to play again? If so, press "y". if not press "n"."
 
