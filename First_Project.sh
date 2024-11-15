@@ -12,7 +12,7 @@
 # Creating the Letters array to define the 26 letters of the alphabet
 
 Letters=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
-User_Signed_In=""
+#User_Signed_In=""
 
 # If Game_Files is not in "echo ls" (looking in current directory) touch Game_Files. 
 # (Or just append GameFiles)
@@ -20,8 +20,8 @@ User_Signed_In=""
 echo "" >> Game_Files.txt
 
 # If header information isn't in Game_Files as top line already then add it
-
-if [ =! grep -F -x -q "Player_Password_Date_Time_SessionNumber_Win_Loss_GeneratedLetter_GuessedWord" Game_Files.txt ]; then
+grep -Fxq "Player_Password_Date_Time_SessionNumber_Win_Loss_GeneratedLetter_GuessedWord" Game_Files.txt
+if [  $? != 0 ]; then
     echo "Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord" >> Game_Files.txt
 fi
 
@@ -58,8 +58,6 @@ if [ -z "$User_Signed_In" ]; then
         read -p "Press "s" to start the game, or "x" to exit." Playing
     fi
 
-else
-
     read -p "Press "s" to start the game, or "x" to exit." Playing
 fi
 
@@ -79,7 +77,7 @@ Session_Number=$(grep -c "$Username" Game_Files.txt)
      # If the word does contain the letter, display "You won! the letter was (letter) and your word was (word)."
      # If the word does NOT contain the letter, display "You lost :( the letter was (letter) and your word was (word)."
 
-        if [[ $User_Word =~ "$RandomLetter" ]]
+        if [[ $User_Word =~ "$RandomLetter" ]]; then
             echo "You won! The letter was $RandomLetter".""
             echo "$Username"_"$Password"_""$date "+%m-%d-%Y"""_""$date "+%H:%M:%S"""_"$Session_Number"_""Win_"$RandomLetter"_"$User_Word" >> Game_Files.txt
             read -p "Would you like to play again? Press "y" if yes, "n for no."" Play_Again
@@ -95,7 +93,7 @@ Session_Number=$(grep -c "$Username" Game_Files.txt)
                 read -p "Would you like to play again? Press "y" if yes, "n for no."" Play_Again
             fi
 
-        else
+        #else
             echo "You lost :( The letter was $RandomLetter".""
             read -p "Would you like to play again?" Play_Again
             if [ $Play_Again == "y" ]; then
@@ -111,12 +109,12 @@ Session_Number=$(grep -c "$Username" Game_Files.txt)
             fi
         fi
 
-    else if [ $Playing == "x" ]; then
+   # else if [ $Playing == "x" ]; then
         echo "Thanks for playing!"
         sleep 5
         exit
 
-    else
+    #else
         read -p "Press "s" to start the game, or "x" to exit." Playing
 fi
 # Now record the attempt with account, date and time, win or loss, generated letter, and guessed word into Game_Files.
@@ -126,3 +124,4 @@ fi
 # if no then display "The stats of the current session are (session Stats), Thanks for Playing
 
 #END
+exit 0
