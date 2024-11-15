@@ -21,12 +21,12 @@ echo "" >> Game_Files.txt
 
 # If header information isn't in Game_Files as top line already then add it
 
-if [ || grep -Fxq "Player_Password_Date_Time_SessionNumber_Win_Loss_GeneratedLetter_GuessedWord" Game_Files.txt ]; then
+if [ =! grep -Fxq "Player_Password_Date_Time_SessionNumber_Win_Loss_GeneratedLetter_GuessedWord" Game_Files.txt ]; then
     echo "Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord" >> Game_Files.txt
 fi
 
 
-if [ -z "$User_Signed_In"  ]; then
+if [ -z "$User_Signed_In" ]; then
 
  # Ask user for username or password or if they would like to create an account
 
@@ -41,7 +41,7 @@ if [ -z "$User_Signed_In"  ]; then
         if [ || grep -Fxq "$Username"_"$Password" Game_Files.txt ]; then
             echo "Welcome $Username."
             User_Signed_In=true
-            else
+        else
                 echo "Username or password don't exist or don't match the database."
         fi
 
