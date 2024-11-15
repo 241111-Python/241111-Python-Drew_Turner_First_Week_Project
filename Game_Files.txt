@@ -1,7 +1,0 @@
-Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
-Drew_Turner_
-Drew_Turner_+%m-%d-%Y_+%H:%M:%S_1_Win_e_droves
-Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
-a_a_+%m-%d-%Y_+%H:%M:%S_2_Win_u_hard
-Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord
-a_a_11/15/2024_00:45:48_4_Win_h_sword
