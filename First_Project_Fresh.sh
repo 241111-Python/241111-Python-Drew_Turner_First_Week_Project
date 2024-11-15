@@ -37,7 +37,7 @@ read -p "Would you like to play? Press "y" for yes and "n" for no. " Playing
 
 while [ $Playing == "y" ]
 do
-    Random_Number=$(( (Random % 26) ))
+    Random_Number=$(( (RANDOM % 26) ))
     RandomLetter="${Letters[Random_Number -1]}"
 
      # Ask the user for a word as input and store that word as a variable.
