@@ -21,7 +21,7 @@ echo "" >> Game_Files.txt
 
 # If header information isn't in Game_Files as top line already then add it
 
-if [ =! grep -Fxq "Player_Password_Date_Time_SessionNumber_Win_Loss_GeneratedLetter_GuessedWord" Game_Files.txt ]; then
+if [ =! grep -F -x -q "Player_Password_Date_Time_SessionNumber_Win_Loss_GeneratedLetter_GuessedWord" Game_Files.txt ]; then
     echo "Player_Password_Date_Time_SessionNumber_WinOrLoss_GeneratedLetter_GuessedWord" >> Game_Files.txt
 fi
 
