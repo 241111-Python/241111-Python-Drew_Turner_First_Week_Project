@@ -6,5 +6,5 @@ echo "$Wins ""$(date)" >> Statistics.txt
 
 while IFS= read -r line
 do
-    echo "$line"
-done < Game_Files.txt | awk -F'_' '{print $(NF-1)}'
+   delimited_Line_Array=$(echo "$line" | awk -F'_' '{print $(NF-1)}')
+done < Game_Files.txt 
