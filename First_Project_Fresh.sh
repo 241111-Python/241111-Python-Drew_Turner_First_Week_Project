@@ -34,13 +34,13 @@ Session_Number=$(grep -c "$Username" Game_Files.txt)
 
 read -p "Would you like to play? Press "y" for yes and "n" for no. " Playing
 
-if [ $Playing=="n" ]; then
-        echo "Thanks for playing!"
-        sleep 2
-        exit
-fi
+#if [ $Playing="n" ]; then
+#        echo "Thanks for playing!"
+#        sleep 2
+#        exit
+#fi
 
-while [ $Playing="y" ]
+while [ $Playing == "y" ]
 do
     Random_Number=$(( (Random % 26) ))
     RandomLetter="${Letters[Random_Number -1]}"
@@ -63,9 +63,9 @@ do
             echo ""
             
     fi
-    if [ $Playing=="n" ]; then
-            break
-    fi
+#    if [ $Playing="n" ]; then
+#            break
+#    fi
 done
 
 echo "Thanks for playing!"
